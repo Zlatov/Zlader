@@ -6,7 +6,34 @@
   <link rel="stylesheet" type="text/css" href="../dist/zlader.css">
 </head>
 <body>
+  <div class="zlader">
+    <div class="zlader-window">
+      <div class="zlader-slide" style="background-image: url('images/854-480-apple-blur.jpg');"></div>
+      <div class="zlader-slide" style="background-image: url('images/854-480-autumn-colorful.jpg');"></div>
+      <div class="zlader-slide" style="background-image: url('images/854-480-beautiful-beauty.jpg');"></div>
+      <div class="zlader-slide" style="background-image: url('images/854-480-bloom-blossom-flora.jpg');"></div>
+      <div class="zlader-slide" style="background-image: url('images/854-480-car-classic.jpg');"></div>
+      <div class="zlader-slide" style="background-image: url('images/854-480-girl-smeh.jpg');"></div>
+      <div class="zlader-slide" style="background-image: url('images/854-480-headlights-lamborghini.jpg');"></div>
+      <div class="zlader-slide" style="background-image: url('images/854-480-nature.jpg ');"></div>
+    </div>
+    <div class="zlader-controls">
+      <div class="zlader-control"></div>
+      <div class="zlader-control"></div>
+      <div class="zlader-control"></div>
+      <div class="zlader-control"></div>
+      <div class="zlader-control"></div>
+      <div class="zlader-control"></div>
+      <div class="zlader-control"></div>
+      <div class="zlader-control"></div>
+    </div>
+  </div>
   <script type="text/javascript" src="../vendor_yarn/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="../dist/zlader.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".zlader").zlader();
+    });
+  </script>
 </body>
 </html>

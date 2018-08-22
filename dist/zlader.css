@@ -1,0 +1,80 @@
+.zlader {
+  position: relative;
+}
+
+.zlader .zlader-window {
+  position: relative;
+  overflow: hidden;
+
+  width: 854px;
+  height: 480px;
+}
+
+.zlader .zlader-window .zlader-slide {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: auto;
+  top: auto;
+
+  width: 854px;
+  height: 480px;
+}
+
+.zlader .zlader-controls {
+  position: absolute;
+  bottom: 10px;
+  font-size: 0;
+  text-align: center;
+
+  width: 854px;
+}
+
+.zlader .zlader-controls .zlader-control {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 11px; /* width/2+border-radius */
+  margin-right: 10px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.zlader .zlader-controls .zlader-control:last-child {
+  margin-right: 0;
+}
+
+.zlader .zlader-controls .zlader-control:hover {
+  opacity: 1;
+  transform: scale(1.125);
+}
+
+/* Дополнительный CSS */
+
+.zlader {
+}
+
+.zlader .zlader-window {
+  width: 854px;
+  height: 480px;
+}
+
+.zlader .zlader-window .zlader-slide {
+  width: 854px;
+  height: 480px;
+}
+
+.zlader .zlader-controls {
+  width: 854px;
+}
+
+.zlader .zlader-controls .zlader-control {
+  background-color: #08497B;
+  border-color: #063961;
+}
