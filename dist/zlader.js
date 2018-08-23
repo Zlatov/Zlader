@@ -19,7 +19,7 @@
   }
   ZladerError.prototype = Object.create(Error.prototype);
 
-  $.fn.zlader = function(o = null) {
+  $.fn.zlader = function(o) {
     if (this.toArray().length != 1) {
       throw new Error('Плашин предназначен для инициализации единичого Dom.')
     }
