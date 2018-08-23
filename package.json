@@ -1,6 +1,6 @@
 {
   "name": "zlader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "jQuery Slider",
   "main": "dist/zlader.js",
   "repository": "https://github.com/Zlatov/Zlader.git",
