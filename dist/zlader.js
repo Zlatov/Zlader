@@ -92,6 +92,8 @@
         slide.css({left: "-" + frame_width + "px"})
       }
       slide.addClass("leafing")
+      this.relays.removeClass("active")
+      this.relays.eq(index).addClass("active")
       var instance = this
       slide.animate({left:"0px"}, {complete: function() {
         instance.slides.removeClass("active")
