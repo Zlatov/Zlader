@@ -4,11 +4,98 @@
   <meta charset="UTF-8">
   <title>Examples 1</title>
   <link rel="stylesheet" type="text/css" href="../dist/zlader.css">
+  <style type="text/css">
+
+    .custom_slider {
+      position: relative;
+      text-align: center;
+
+      width: 854px;
+      height: 480px;
+    }
+
+    .custom_slider .f {
+      position: relative;
+      overflow: hidden;
+
+      width: 854px;
+      height: 480px;
+    }
+
+    .custom_slider .f .s {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+
+      width: 854px;
+      height: 480px;
+    }
+
+    .custom_slider .f .s.active {
+      z-index: 10;
+    }
+
+    .custom_slider .f .s.leafing {
+      z-index: 20;
+    }
+
+    .custom_slider .p {
+      display: inline-block;
+      padding: 10px;
+      font-size: 0;
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      text-align: center;
+      z-index: 30;
+    }
+
+    /* center an absolutely positioned element */
+    .custom_slider .c {
+      position: relative;
+      left: -50%;
+    }
+
+    .custom_slider .p .r {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      border-style: solid;
+      border-width: 1px;
+      border-color: black;
+      border-radius: 11px; /* width/2 + border-radius */
+      margin-right: 10px;
+      opacity: 0.5;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .custom_slider .p .r:last-child {
+      margin-right: 0;
+    }
+
+    .custom_slider .p .r:hover {
+      transition: all 0.25s ease;
+      opacity: 1;
+    }
+
+    .custom_slider .p .r.active {
+      opacity: 0.6;
+      transform: scale(1.125);
+    }
+
+
+  </style>
 </head>
 <body>
   <div class="zlader">
     <div class="frame">
-      <a href="#" class="slide" style="background-image: url('images/854-480-apple-blur.jpg');"></a>
+      <a href="#" class="slide active" style="background-image: url('images/854-480-apple-blur.jpg');"></a>
       <a href="#" class="slide" style="background-image: url('images/854-480-autumn-colorful.jpg');"></a>
       <a href="#" class="slide" style="background-image: url('images/854-480-beautiful-beauty.jpg');"></a>
       <a href="#" class="slide" style="background-image: url('images/854-480-bloom-blossom-flora.jpg');"></a>
@@ -18,14 +105,28 @@
       <a href="#" class="slide" style="background-image: url('images/854-480-nature.jpg ');"></a>
     </div>
     <div class="panel">
-      <div class="relay"></div>
-      <div class="relay"></div>
-      <div class="relay"></div>
-      <div class="relay"></div>
-      <div class="relay"></div>
-      <div class="relay"></div>
-      <div class="relay"></div>
-      <div class="relay"></div>
+      <div class="cape">
+        <div class="relay"></div>
+        <div class="relay"></div>
+        <div class="relay"></div>
+        <div class="relay"></div>
+        <div class="relay"></div>
+        <div class="relay"></div>
+        <div class="relay"></div>
+        <div class="relay"></div>
+      </div>
+    </div>
+  </div>
+  <div class="custom_slider">
+    <div class="f">
+      <div class="s" style="background-image: url('images/854-480-headlights-lamborghini.jpg');"></div>
+      <div class="s" style="background-image: url('images/854-480-girl-smeh.jpg');"></div>
+    </div>
+    <div class="p">
+      <div class="c">
+        <div class="r"></div>
+        <div class="r"></div>
+      </div>
     </div>
   </div>
   <script type="text/javascript" src="../vendor_yarn/jquery/dist/jquery.min.js"></script>
@@ -33,6 +134,15 @@
   <script type="text/javascript">
     $(document).ready(function() {
       window.zlader = $(".zlader").zlader();
+      $(".custom_slider").zlader({
+        selectors: {
+          panel: '.p',
+          relay: '.r',
+          frame: '.f',
+          slide: '.s'
+        },
+        leafing_over_interval: 0
+      });
     });
   </script>
 </body>
