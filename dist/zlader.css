@@ -35,19 +35,21 @@
   z-index: 20;
 }
 
-.zlader .panel {
+/* Wrapper for center an absolutely positioned element */
+.zlader .cape {
   display: inline-block;
-  padding: 10px;
   font-size: 0;
   position: absolute;
   left: 50%;
-  bottom: 10px;
+  bottom: 62px;
   text-align: center;
   z-index: 30;
+  height: 0px;
 }
 
-/* center an absolutely positioned element */
-.zlader .cape {
+.zlader .panel {
+  padding: 20px 40px;
+  display: inline-block;
   position: relative;
   left: -50%;
 }
