@@ -1,2 +1,5 @@
-Zlader
-===
+# Zlader
+
+## Install
+
+`yarn add zlader`
