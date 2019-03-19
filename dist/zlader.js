@@ -21,7 +21,7 @@
 
   $.fn.zlader = function(o) {
     if (this.toArray().length != 1) {
-      throw new Error('Плашин предназначен для инициализации единичого Dom.')
+      throw new Error('Плагин предназначен для инициализации единичого Dom.')
     }
     var data = this.data('zlader')
     if (!data) {
